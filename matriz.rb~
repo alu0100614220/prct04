@@ -3,39 +3,30 @@
 
 
 
-  puts "Calculo de matrices cuadradas"
-  puts "Introduza las dimensiones de las matrices"
-  STDOUT.flush
-  n = gets.chomp
-  puts "Matrices de " + n + "x" + n
-  a = [[0,0,0], [0,0,0], [0,0,0]]
-  b = [[0,0,0]*(n.to_i)]
-  c = [0]*n.to_i
-  d = [c]*n.to_i
+  puts "Calculo de matrices cuadradas 3x3"
   
-  for l in (0...n.to_i) do
-    for k in (0...n.to_i) do
-      puts c[l][k]
+  a = [[0,0,0], [0,0,0], [0,0,0]]
+  b = [[0,0,0], [0,0,0], [0,0,0]]
+  c = [[0,0,0], [0,0,0], [0,0,0]]
+  
+  for l in (0...3) do
+    for k in (0...3) do
+      puts a[l][k]
     end
   end
   
-  for i in (0...(n.to_i)) do
-    for j in (0...(n.to_i)) do
+  for i in (0...3) do
+    for j in (0...3) do
       puts "Introduza el valor del elemento [#{i}][#{j}]"
       STDOUT.flush
       aux = gets.chomp
-      c[i][j] = aux.to_i
+      a[i][j] = aux.to_i
     end	
   end
+
   
-  #for l in 0..(n.to_i-1) do
-   # for k in 0..(n.to_i-1) do
-    #  puts c[l,k]
-    #end
-  #end
-  
-for l in (0...n.to_i) do
-    for k in (0...n.to_i) do
-      puts c[l][k]
+for l in (0...3) do
+    for k in (0...3) do
+      puts a[l][k]
     end
   end
