@@ -8,6 +8,7 @@
   a = [[0,0,0], [0,0,0], [0,0,0]]
   b = [[0,0,0], [0,0,0], [0,0,0]]
   c = [[0,0,0], [0,0,0], [0,0,0]]
+  d = [[0,0,0], [0,0,0], [0,0,0]]
   
   
   for i in (0...3) do
@@ -28,7 +29,16 @@
     end	
  end
   
-  puts "Multiplicacion de matrices: "
+  # "Suma de matrices: "
+  
+  for i in (0...3) do
+    for j in (0...3) do
+	c[i][j] = (a[i][j] + b[i][j])
+    end	
+ end
+ 
+ 
+  # "Multiplicacion de matrices: "
   
   for i in (0...3) do
     for j in (0...3) do
@@ -36,12 +46,20 @@
       for k in (0...3) do
 	sum += (a[i][k] * b[k][j])
       end
-      c[i][j] = sum
+      d[i][j] = sum
     end	
  end
  
+   puts "Suma de Matrices: "
    for l in (0...3) do
     for k in (0...3) do
       puts c[l][k]
+    end
+  end
+  
+     puts "Multiplicacion de Matrices: "
+   for l in (0...3) do
+    for k in (0...3) do
+      puts d[l][k]
     end
   end
